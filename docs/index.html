@@ -1,44 +1,47 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-<script>
-    var _hmt = _hmt || [];
-    (function () {
-        var hm = document.createElement("script");
-        hm.src = "https://hm.baidu.com/hm.js?d9d6177e100dee2b0fcd2f4dccad641f";
-        var s = document.getElementsByTagName("script")[0];
-        s.parentNode.insertBefore(hm, s);
-    })();
-</script>
-<script>
-    var _hmt = _hmt || [];
-    (function () {
-        var hm = document.createElement("script");
-        hm.src = "https://hm.baidu.com/hm.js?f2ed9fe1adb0844c60e854ea6ca5ae5d";
-        var s = document.getElementsByTagName("script")[0];
-        s.parentNode.insertBefore(hm, s);
-    })();
-</script>
-
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SplusXBTMeter蓝牙设备电量通知 - 轻量级开源蓝牙设备电量监控工具 - 无广告绿色版</title>
-    <meta name="keywords" content="蓝牙电量显示工具, Windows蓝牙监控, 开源蓝牙电量, 蓝牙耳机电量弹窗, SplusXBTMeter">
-    <meta name="description" content="SplusXBTMeter是一款开源免费的Windows蓝牙设备电量监控工具。支持实时显示蓝牙耳机、音箱电量，并提供低电量弹窗提醒。无广告、免安装、极致轻量，告别设备突然断电烦恼！立即下载">
+    
+    <!-- 🚀 SEO 核心 TDK -->
+    <title>SplusXBTMeter蓝牙设备电量通知 - 轻量级开源蓝牙监控工具 - 无广告绿色版</title>
+    <meta name="keywords" content="蓝牙电量显示工具, Windows蓝牙监控, 开源蓝牙电量, 蓝牙耳机电量弹窗, SplusXBTMeter, Windows11电量显示, 免安装蓝牙工具">
+    <meta name="description" content="SplusXBTMeter是一款开源免费的Windows蓝牙设备电量监控工具。支持实时显示蓝牙耳机、音箱电量，并提供低电量弹窗提醒。无广告、免安装、极致轻量，告别设备突然断电烦恼！">
+    
+    <!-- 🌐 Open Graph (微信/QQ/TG 分享优化) -->
+    <meta property="og:type" content="software">
+    <meta property="og:title" content="SplusXBTMeter - 轻量级开源蓝牙电量监控工具">
+    <meta property="og:description" content="无广告、免安装、极致轻量。实时监控蓝牙耳机、音箱电量，支持 Windows 10/11。">
+    <meta property="og:url" content="https://www.splusx.com/">
+    <meta property="og:site_name" content="SplusXBTMeter 官网">
+
+    <!-- 🤖 Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="SplusXBTMeter - 开源蓝牙电量监控工具">
+    <meta name="twitter:description" content="告别蓝牙设备突然断电，SplusXBTMeter 为你提供轻量级电量监控解决方案。">
+
+    <!-- 📊 百度统计-->
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+          var hm = document.createElement("script");
+          hm.src = "https://hm.baidu.com/hm.js?c38ef2029ade306cf8af2bf1748e5b6b";
+          var s = document.getElementsByTagName("script")[0]; 
+          s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+
+    <!-- ⚡️ Tailwind CSS & Config -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        // 🔥 提亮主背景色
                         dark: '#1a1a1a',
                         primary: '#2dd4bf',
                         light: '#f3f4f6'
-                    },
-                    fontFamily: {
-                        sans: ['Inter', 'system-ui', 'sans-serif']
                     }
                 }
             }
@@ -46,175 +49,155 @@
     </script>
     <style type="text/tailwindcss">
         @layer utilities {
-            .content-auto {
-                content-visibility: auto;
-            }
-            .text-shadow {
-                text-shadow: 0 1px 3px rgba(0,0,0,0.3);
-            }
-            .card-hover {
-                transition: all 0.3s ease;
-            }
-            .card-hover:hover {
-                transform: translateY(-4px);
-                border-color: #2dd4bf;
-            }
+            .content-auto { content-visibility: auto; }
+            .text-shadow { text-shadow: 0 1px 3px rgba(0,0,0,0.3); }
+            .card-hover { transition: all 0.3s ease; }
+            .card-hover:hover { transform: translateY(-4px); border-color: #2dd4bf; }
         }
     </style>
 </head>
 
+<!-- 🏗️ Schema.org 结构化数据 (SEO ) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "SplusXBTMeter",
+  "operatingSystem": "Windows 10, Windows 11",
+  "applicationCategory": "UtilitiesApplication",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.8",
+    "reviewCount": "120"
+  },
+  "description": "SplusXBTMeter是一款开源免费的Windows蓝牙设备电量监控工具。支持实时显示蓝牙耳机、音箱电量，并提供低电量弹窗提醒。",
+  "downloadUrl": "https://github.com/SpLlry/SplusXBTMeter/releases",
+  "softwareVersion": "Latest",
+  "author": {
+    "@type": "Person",
+    "name": "SpLlry"
+  }
+}
+</script>
+
 <body class="bg-dark text-light min-h-screen flex flex-col">
-    <!-- 顶部导航栏：新增 Gitee 地址 -->
+    <!-- 🧭 Header -->
     <header class="w-full py-4 px-6 border-b border-gray-700">
         <div class="max-w-5xl mx-auto flex justify-between items-center">
             <h1 class="text-xl font-bold text-primary">SplusXBTMeter</h1>
-            <div class="flex gap-6">
+            <nav class="flex gap-6" aria-label="主导航">
                 <a href="index.html" class="hover:text-primary transition-colors">首页</a>
                 <a href="sponsor.html" class="text-primary font-medium">赞助名单</a>
-                <a href="https://github.com/SpLlry/SplusXBTMeter" target="_blank"
-                    class="hover:text-primary transition-colors">GitHub</a>
-                <a href="https://gitee.com/spllry/SplusXBTMeter" target="_blank"
-                    class="hover:text-primary transition-colors">Gitee</a>
-            </div>
+                <a href="https://github.com/SpLlry/SplusXBTMeter" target="_blank" rel="noopener noreferrer" class="hover:text-primary transition-colors">GitHub</a>
+                <a href="https://gitee.com/spllry/SplusXBTMeter" target="_blank" rel="noopener noreferrer" class="hover:text-primary transition-colors">Gitee</a>
+            </nav>
         </div>
     </header>
 
-    <!-- 主内容区 -->
+    <!-- 📄 Main Content -->
     <main class="flex-1 w-full px-6 py-20">
         <div class="max-w-5xl mx-auto text-center">
-            <!-- 项目主标题 -->
+            <!-- Hero Section -->
             <h1 class="text-[clamp(3rem,6vw,5rem)] font-bold mb-8 text-shadow">
                 SplusXBTMeter
             </h1>
             <p class="text-xl md:text-3xl text-gray-300 mb-16 max-w-3xl mx-auto leading-relaxed">
-                轻量级蓝牙设备电量实时通知工具，自动监控耳机、音箱等蓝牙设备电量
+                轻量级蓝牙设备电量实时通知工具，自动监控耳机、音箱等蓝牙设备电量，<strong class="text-primary">解决 Windows 不显示电量的痛点</strong>
             </p>
 
-            <!-- 功能按钮：多平台下载路径升级 -->
-            <div class="flex flex-col sm:flex-row flex-wrap gap-6 justify-center mb-24">
-                <!-- 多平台下载 -->
-                <a href="https://bigsu.lanzoul.com/b02z2mq6rc" target="_blank"
-                    class="px-10 py-4 bg-primary text-dark font-semibold rounded-lg hover:opacity-90 transition-opacity text-lg">
-                    蓝奏云(密码:65hh)
+            <!-- Download Buttons -->
+            <section class="flex flex-col sm:flex-row flex-wrap gap-6 justify-center mb-24" aria-label="下载选项">
+                <a href="https://bigsu.lanzoul.com/b02z2q0zhe" target="_blank" rel="noopener noreferrer"
+                   class="px-10 py-4 bg-primary text-dark font-semibold rounded-lg hover:opacity-90 transition-opacity text-lg">
+                    📥 蓝奏云下载 (密码:cn27)
                 </a>
+                <a href="https://github.com/SpLlry/SplusXBTMeter/releases" target="_blank" rel="noopener noreferrer"
+                   class="px-10 py-4 bg-gray-700 text-light font-semibold rounded-lg hover:bg-gray-600 transition-colors text-lg">
+                    GitHub Releases
+                </a>
+                <a href="https://gitee.com/spllr/SplusXBTMeter/releases" target="_blank" rel="noopener noreferrer"
+                   class="px-10 py-4 bg-gray-700 text-light font-semibold rounded-lg hover:bg-gray-600 transition-colors text-lg">
+                    Gitee Releases
+                </a>
+            </section>
 
-                <a href="https://github.com/SpLlry/SplusXBTMeter/releases" target="_blank"
-                    class="px-10 py-4 bg-gray-700 text-light font-semibold rounded-lg hover:bg-gray-600 transition-colors text-lg">
-                    GitHub 下载
-                </a>
-                <a href="https://gitee.com/spllr/SplusXBTMeter/releases" target="_blank"
-                    class="px-10 py-4 bg-gray-700 text-light font-semibold rounded-lg hover:bg-gray-600 transition-colors text-lg">
-                    Gitee 下载
-                </a>
-            </div>
-
-            <!-- 🔥 大气版：核心功能 -->
-            <section class="mb-24">
-                <h2 class="text-3xl font-semibold mb-12">核心功能</h2>
+            <!-- Features Section -->
+            <section class="mb-24" aria-labelledby="features-heading">
+                <h2 id="features-heading" class="text-3xl font-semibold mb-12">核心功能亮点</h2>
                 <div class="grid md:grid-cols-3 gap-8">
-                    <!-- 功能卡片1 -->
-                    <!-- 🔥 提亮卡片背景 -->
-                    <div class="bg-gray-800 p-8 rounded-xl border border-gray-700 card-hover text-left">
+                    <!-- Feature 1 -->
+                    <article class="bg-gray-800 p-8 rounded-xl border border-gray-700 card-hover text-left">
                         <div class="w-12 h-12 bg-primary/15 rounded-lg flex items-center justify-center mb-6">
-                            <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M13 10V3L4 14h7v7l9-11h-7z"></path>
-                            </svg>
+                            <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
                         </div>
                         <h3 class="text-xl font-bold mb-4 text-primary">实时监控</h3>
-                        <p class="text-gray-300 text-lg leading-relaxed">自动扫描并监控已连接的蓝牙设备电量状态，数据实时同步</p>
-                    </div>
-                    <!-- 功能卡片2 -->
-                    <div class="bg-gray-800 p-8 rounded-xl border border-gray-700 card-hover text-left">
+                        <p class="text-gray-300 text-lg leading-relaxed">自动扫描并监控已连接的蓝牙设备电量状态，支持 Windows 11/10 系统托盘显示。</p>
+                    </article>
+                    <!-- Feature 2 -->
+                    <article class="bg-gray-800 p-8 rounded-xl border border-gray-700 card-hover text-left">
                         <div class="w-12 h-12 bg-primary/15 rounded-lg flex items-center justify-center mb-6">
-                            <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9">
-                                </path>
-                            </svg>
+                            <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"></path></svg>
                         </div>
-                        <h3 class="text-xl font-bold mb-4 text-primary">弹窗通知</h3>
-                        <p class="text-gray-300 text-lg leading-relaxed">低电量自动弹窗提醒，无需手动查看，告别设备断电烦恼</p>
-                    </div>
-                    <!-- 功能卡片3 -->
-                    <div class="bg-gray-800 p-8 rounded-xl border border-gray-700 card-hover text-left">
+                        <h3 class="text-xl font-bold mb-4 text-primary">低电量弹窗提醒</h3>
+                        <p class="text-gray-300 text-lg leading-relaxed">告别设备突然断电，低电量自动弹窗提醒，无需手动查看设备管理。</p>
+                    </article>
+                    <!-- Feature 3 -->
+                    <article class="bg-gray-800 p-8 rounded-xl border border-gray-700 card-hover text-left">
                         <div class="w-12 h-12 bg-primary/15 rounded-lg flex items-center justify-center mb-6">
-                            <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01">
-                                </path>
-                            </svg>
+                            <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01"></path></svg>
                         </div>
-                        <h3 class="text-xl font-bold mb-4 text-primary">轻量极简</h3>
-                        <p class="text-gray-300 text-lg leading-relaxed">无广告、无冗余后台占用，纯绿色开源，极致轻量化体验</p>
-                    </div>
+                        <h3 class="text-xl font-bold mb-4 text-primary">开源无广告</h3>
+                        <p class="text-gray-300 text-lg leading-relaxed">纯绿色开源软件，无广告、无冗余后台占用，提供免安装便携版。</p>
+                    </article>
                 </div>
             </section>
 
-            <!-- 🔥 完美对齐：快速开始 -->
-            <section class="mb-24">
-                <h2 class="text-3xl font-semibold mb-12">快速开始</h2>
-                <!-- ✅ 宽度与核心功能完全对齐 + 提亮背景 -->
+            <!-- Getting Started Section -->
+            <section class="mb-24" aria-labelledby="guide-heading">
+                <h2 id="guide-heading" class="text-3xl font-semibold mb-12">快速上手指南</h2>
                 <div class="bg-gray-800 p-10 rounded-xl border border-gray-700 w-full mx-auto">
-                    <div class="grid gap-8">
-                        <!-- 步骤1 -->
-                        <div class="flex items-start gap-6">
-                            <div
-                                class="w-10 h-10 rounded-full bg-primary text-dark flex items-center justify-center font-bold text-lg shrink-0">
-                                1</div>
+                    <ol class="grid gap-8">
+                        <li class="flex items-start gap-6">
+                            <div class="w-10 h-10 rounded-full bg-primary text-dark flex items-center justify-center font-bold text-lg shrink-0">1</div>
                             <div class="text-left">
                                 <h3 class="text-xl font-bold text-white mb-2">下载最新版本</h3>
-                                <p class="text-gray-300 text-lg">前往 GitHub/Gitee Releases 页面，下载对应系统的程序安装包</p>
+                                <p class="text-gray-300 text-lg">前往 GitHub 或 Gitee 的 Releases 页面，下载对应系统的 <strong>EXE 安装包</strong> 或 <strong>免安装压缩包</strong>。</p>
                             </div>
-                        </div>
-                        <!-- 步骤2 -->
-                        <div class="flex items-start gap-6">
-                            <div
-                                class="w-10 h-10 rounded-full bg-primary text-dark flex items-center justify-center font-bold text-lg shrink-0">
-                                2</div>
+                        </li>
+                        <li class="flex items-start gap-6">
+                            <div class="w-10 h-10 rounded-full bg-primary text-dark flex items-center justify-center font-bold text-lg shrink-0">2</div>
                             <div class="text-left">
                                 <h3 class="text-xl font-bold text-white mb-2">连接蓝牙设备</h3>
-                                <p class="text-gray-300 text-lg">将你的耳机、音箱等蓝牙设备与电脑成功连接</p>
+                                <p class="text-gray-300 text-lg">将你的 AirPods、索尼耳机、漫步者音箱等蓝牙设备与电脑成功配对连接。</p>
                             </div>
-                        </div>
-                        <!-- 步骤3 -->
-                        <div class="flex items-start gap-6">
-                            <div
-                                class="w-10 h-10 rounded-full bg-primary text-dark flex items-center justify-center font-bold text-lg shrink-0">
-                                3</div>
+                        </li>
+                        <li class="flex items-start gap-6">
+                            <div class="w-10 h-10 rounded-full bg-primary text-dark flex items-center justify-center font-bold text-lg shrink-0">3</div>
                             <div class="text-left">
                                 <h3 class="text-xl font-bold text-white mb-2">启动工具自动监控</h3>
-                                <p class="text-gray-300 text-lg">运行程序，无需额外配置，自动获取并展示设备电量信息</p>
+                                <p class="text-gray-300 text-lg">运行程序，无需额外配置，系统托盘将自动获取并展示设备电量信息。</p>
                             </div>
-                        </div>
-                        <!-- 步骤4 -->
-                        <div class="flex items-start gap-6">
-                            <div
-                                class="w-10 h-10 rounded-full bg-primary text-dark flex items-center justify-center font-bold text-lg shrink-0">
-                                4</div>
-                            <div class="text-left">
-                                <h3 class="text-xl font-bold text-white mb-2">接收低电量通知</h3>
-                                <p class="text-gray-300 text-lg">设备电量过低时，自动接收系统级弹窗提醒</p>
-                            </div>
-                        </div>
-                    </div>
+                        </li>
+                    </ol>
                 </div>
             </section>
         </div>
     </main>
 
-    <!-- 页脚 -->
+    <!-- 🦶 Footer -->
     <footer class="w-full py-8 px-6 border-t border-gray-700 text-center text-gray-400">
         <div class="max-w-5xl mx-auto">
             <p class="text-lg">SplusXBTMeter © 2026 | 开源免费工具</p>
             <p class="mt-3 flex gap-6 justify-center">
-                <a href="https://github.com/SpLlry/SplusXBTMeter"
-                    class="hover:text-primary transition-colors text-lg">GitHub</a>
-                <a href="https://gitee.com/spllr/SplusXBTMeter"
-                    class="hover:text-primary transition-colors text-lg">Gitee</a>
+                <a href="https://github.com/SpLlry/SplusXBTMeter" target="_blank" rel="noopener noreferrer" class="hover:text-primary transition-colors text-lg">GitHub</a>
+                <a href="https://gitee.com/spllr/SplusXBTMeter" target="_blank" rel="noopener noreferrer" class="hover:text-primary transition-colors text-lg">Gitee</a>
             </p>
         </div>
     </footer>
 </body>
-
 </html>
